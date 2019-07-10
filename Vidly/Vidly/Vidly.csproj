@@ -168,27 +168,24 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907101437155_InitialModel.cs" />
-    <Compile Include="Migrations\201907101437155_InitialModel.Designer.cs">
-      <DependentUpon>201907101437155_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201907101722453_InitialModel.cs" />
+    <Compile Include="Migrations\201907101722453_InitialModel.Designer.cs">
+      <DependentUpon>201907101722453_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907101446315_IsSubscribedToNewsletter.cs" />
-    <Compile Include="Migrations\201907101446315_IsSubscribedToNewsletter.Designer.cs">
-      <DependentUpon>201907101446315_IsSubscribedToNewsletter.cs</DependentUpon>
+    <Compile Include="Migrations\201907101732506_AddmembershipType.cs" />
+    <Compile Include="Migrations\201907101732506_AddmembershipType.Designer.cs">
+      <DependentUpon>201907101732506_AddmembershipType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907101458239_MembershipType.cs" />
-    <Compile Include="Migrations\201907101458239_MembershipType.Designer.cs">
-      <DependentUpon>201907101458239_MembershipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201907101501016_SeedMembershipTypes.cs" />
-    <Compile Include="Migrations\201907101501016_SeedMembershipTypes.Designer.cs">
-      <DependentUpon>201907101501016_SeedMembershipTypes.cs</DependentUpon>
+    <Compile Include="Migrations\201907101735339_SeedMembershipTypeModel.cs" />
+    <Compile Include="Migrations\201907101735339_SeedMembershipTypeModel.Designer.cs">
+      <DependentUpon>201907101735339_SeedMembershipTypeModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -262,6 +259,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Customer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -277,17 +275,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907101437155_InitialModel.resx">
-      <DependentUpon>201907101437155_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907101722453_InitialModel.resx">
+      <DependentUpon>201907101722453_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907101446315_IsSubscribedToNewsletter.resx">
-      <DependentUpon>201907101446315_IsSubscribedToNewsletter.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907101732506_AddmembershipType.resx">
+      <DependentUpon>201907101732506_AddmembershipType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907101458239_MembershipType.resx">
-      <DependentUpon>201907101458239_MembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907101501016_SeedMembershipTypes.resx">
-      <DependentUpon>201907101501016_SeedMembershipTypes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907101735339_SeedMembershipTypeModel.resx">
+      <DependentUpon>201907101735339_SeedMembershipTypeModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
