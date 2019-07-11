@@ -183,12 +183,17 @@
     <Compile Include="Migrations\201907110818272_PopulateMembershipTypeModel.Designer.cs">
       <DependentUpon>201907110818272_PopulateMembershipTypeModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907110830483_AddedMovieModel.cs" />
+    <Compile Include="Migrations\201907110830483_AddedMovieModel.Designer.cs">
+      <DependentUpon>201907110830483_AddedMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\MovieCustomerViewModel.cs" />
@@ -276,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907110818272_PopulateMembershipTypeModel.resx">
       <DependentUpon>201907110818272_PopulateMembershipTypeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907110830483_AddedMovieModel.resx">
+      <DependentUpon>201907110830483_AddedMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
