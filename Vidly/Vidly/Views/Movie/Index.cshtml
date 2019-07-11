@@ -1,17 +1,44 @@
-﻿@model Vidly.ViewModel.MovieCustomerViewModel
+﻿@model IEnumerable<Vidly.Models.Movie>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-<h6>@Model.Movies.Name</h6>
+<h2>Movie</h2>
+<p>
+    @Html.ActionLink("Add ", "MovieForm", "Movie", null, new { @class = "btn btn-default glyphicon glyphicon-plus" })
+</p>
+<table class="table table-bordered table-striped table-condensed">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Release Date</td>
+            <td>Genre</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
 
-<ul>
-    @foreach (var customer in Model.Customers)
-    {
-        <li>@customer.Name</li>
-    }
-</ul>
+        @foreach (var movie in Model)
+        {
+        <tr>
+            <td>@movie.Id</td>
+            <td>@movie.Name</td>
+            <td>@movie.ReleaseDate</td>
+            <td>@movie.Genre.Name</td>
+            <td>
+            <td>
+                @Html.ActionLink(" ", "Details", "Movie", new { id = movie.Id }, new { @class = "btn btn-success glyphicon glyphicon-eye-open" })
+                @Html.ActionLink(" ", "Edit", "Movie", new { id = movie.Id }, new { @class = "btn btn-primary glyphicon glyphicon-edit" })
+                <button data-customer-id="@movie.Id" class="js-delete btn btn-danger glyphicon glyphicon-trash"></button>
+            </td>
+        </tr>
+        }
+
+
+    </tbody>
+
+</table>
 
 
