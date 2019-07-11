@@ -175,21 +175,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907101722453_InitialModel.cs" />
-    <Compile Include="Migrations\201907101722453_InitialModel.Designer.cs">
-      <DependentUpon>201907101722453_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201907110817027_InitialModel.cs" />
+    <Compile Include="Migrations\201907110817027_InitialModel.Designer.cs">
+      <DependentUpon>201907110817027_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907101732506_AddmembershipType.cs" />
-    <Compile Include="Migrations\201907101732506_AddmembershipType.Designer.cs">
-      <DependentUpon>201907101732506_AddmembershipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201907101735339_SeedMembershipTypeModel.cs" />
-    <Compile Include="Migrations\201907101735339_SeedMembershipTypeModel.Designer.cs">
-      <DependentUpon>201907101735339_SeedMembershipTypeModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201907102029118_BirthdateAddedToCustomerModel.cs" />
-    <Compile Include="Migrations\201907102029118_BirthdateAddedToCustomerModel.Designer.cs">
-      <DependentUpon>201907102029118_BirthdateAddedToCustomerModel.cs</DependentUpon>
+    <Compile Include="Migrations\201907110818272_PopulateMembershipTypeModel.cs" />
+    <Compile Include="Migrations\201907110818272_PopulateMembershipTypeModel.Designer.cs">
+      <DependentUpon>201907110818272_PopulateMembershipTypeModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -197,7 +189,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
-    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\MovieCustomerViewModel.cs" />
@@ -280,17 +271,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907101722453_InitialModel.resx">
-      <DependentUpon>201907101722453_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907110817027_InitialModel.resx">
+      <DependentUpon>201907110817027_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907101732506_AddmembershipType.resx">
-      <DependentUpon>201907101732506_AddmembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907101735339_SeedMembershipTypeModel.resx">
-      <DependentUpon>201907101735339_SeedMembershipTypeModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907102029118_BirthdateAddedToCustomerModel.resx">
-      <DependentUpon>201907102029118_BirthdateAddedToCustomerModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907110818272_PopulateMembershipTypeModel.resx">
+      <DependentUpon>201907110818272_PopulateMembershipTypeModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
