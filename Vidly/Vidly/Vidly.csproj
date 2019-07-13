@@ -169,7 +169,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -195,17 +194,31 @@
     <Compile Include="Migrations\201907110835447_populateGenreModel.Designer.cs">
       <DependentUpon>201907110835447_populateGenreModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907111709489_AddedNUmberInStockToMovieModel.cs" />
+    <Compile Include="Migrations\201907111709489_AddedNUmberInStockToMovieModel.Designer.cs">
+      <DependentUpon>201907111709489_AddedNUmberInStockToMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907111826535_AddedAttributesToMovieModel.cs" />
+    <Compile Include="Migrations\201907111826535_AddedAttributesToMovieModel.Designer.cs">
+      <DependentUpon>201907111826535_AddedAttributesToMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907131438037_RemovedMovieModels.cs" />
+    <Compile Include="Migrations\201907131438037_RemovedMovieModels.Designer.cs">
+      <DependentUpon>201907131438037_RemovedMovieModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907131449409_PhoneNumberAndNationalIdadedtoCustomerModel.cs" />
+    <Compile Include="Migrations\201907131449409_PhoneNumberAndNationalIdadedtoCustomerModel.Designer.cs">
+      <DependentUpon>201907131449409_PhoneNumberAndNationalIdadedtoCustomerModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
-    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModel\MovieCustomerViewModel.cs" />
+    <Compile Include="ViewModel\NewCustomerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -214,6 +227,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Footer.css" />
     <Content Include="Content\Images\MadMax.png" />
+    <Content Include="Content\Images\read.jpg" />
     <Content Include="Content\Main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -266,11 +280,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
-    <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Customer\CustomerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -303,6 +316,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907110835447_populateGenreModel.resx">
       <DependentUpon>201907110835447_populateGenreModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907111709489_AddedNUmberInStockToMovieModel.resx">
+      <DependentUpon>201907111709489_AddedNUmberInStockToMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907111826535_AddedAttributesToMovieModel.resx">
+      <DependentUpon>201907111826535_AddedAttributesToMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907131438037_RemovedMovieModels.resx">
+      <DependentUpon>201907131438037_RemovedMovieModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907131449409_PhoneNumberAndNationalIdadedtoCustomerModel.resx">
+      <DependentUpon>201907131449409_PhoneNumberAndNationalIdadedtoCustomerModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -4,14 +4,25 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div>
-        <ul>
-            <li> Id:@Model.Id</li>
-            <li>Name: @Model.Name</li>
-            <li>Release Date: @Model.Birthdate</li>
-            <li>Genre: @Model.IsSubscribedToNewsletter</li>
-        </ul>
+
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Customer Details</h3>
     </div>
-   
+    <div class="panel-body">
+        <p>
+            <ul>
+                <li class="list-group-item">Id:@Model.Id</li>
+                <li class="list-group-item">Name: @Model.Name</li>
+                <li class="list-group-item">Phone Number: @Model.PhoneNumber</li>
+                <li class="list-group-item">National Id: @Model.NationalId</li>
+                <li class="list-group-item">Birth Date: @Model.Birthdate
+                <li class="list-group-item">Subscribed To News: @Model.IsSubscribedToNewsletter</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+
 
 

@@ -11,10 +11,10 @@
 <table class="table table-bordered table-striped table-condensed">
     <thead>
         <tr>
-            <td>Id</td>
             <td>Name</td>
-            <td>Membership Type</td>
-            <td>Discount(%)</td>
+            <td>National Id</td>
+            <td>Phone Number</td>
+            <td>Membership</td>
             <td>Actions</td>
         </tr>
     </thead>
@@ -23,10 +23,10 @@
         @foreach (var customer in Model)
         {
         <tr>
-            <td>@customer.Id</td>
             <td>@customer.Name</td>
+            <td>@customer.NationalId</td>
+            <td>@customer.PhoneNumber</td>
             <td>@customer.MembershipType.MembershipTypeName</td>
-            <td>@customer.MembershipType.DiscountRate</td>
             <td>
                 @Html.ActionLink(" ", "Details", "Customer", new { id = customer.Id }, new { @class = "btn btn-success glyphicon glyphicon-eye-open" })
                 @Html.ActionLink(" ", "Edit", "Customer", new { id = customer.Id }, new { @class = "btn btn-primary glyphicon glyphicon-edit" })
