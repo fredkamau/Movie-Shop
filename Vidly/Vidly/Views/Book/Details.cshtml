@@ -1,0 +1,22 @@
+﻿@model Vidly.Models.Book
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">Book Details</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                <ul>
+                    <li class="list-group-item">Book Name: @Model.Name</li>
+                    <li class="list-group-item">Author Name: @Model.AuthorName</li>
+                    <li class="list-group-item">Date Published: @Model.DatePublished</li>
+                    <li class="list-group-item">Number in Stock: @Model.NumberInStock</li>
+                    <li class="list-group-item">ISB Number: @Model.ISBN</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+

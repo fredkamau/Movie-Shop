@@ -11,6 +11,7 @@
 <table class="table table-bordered table-striped table-condensed">
     <thead>
         <tr>
+            <td>Id</td>
             <td>Name</td>
             <td>National Id</td>
             <td>Phone Number</td>
@@ -23,6 +24,7 @@
         @foreach (var customer in Model)
         {
         <tr>
+            <td>@customer.Id</td>
             <td>@customer.Name</td>
             <td>@customer.NationalId</td>
             <td>@customer.PhoneNumber</td>
