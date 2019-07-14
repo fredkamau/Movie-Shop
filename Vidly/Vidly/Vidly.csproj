@@ -233,6 +233,10 @@
     <Compile Include="Migrations\201907131550430_BooksModelAdded.Designer.cs">
       <DependentUpon>201907131550430_BooksModelAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907141717476_SeedUsers.cs" />
+    <Compile Include="Migrations\201907141717476_SeedUsers.Designer.cs">
+      <DependentUpon>201907141717476_SeedUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
@@ -483,9 +487,10 @@
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
-    <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\Book\BookList.cshtml" />
     <Content Include="Views\Book\Details.cshtml" />
     <Content Include="Views\Book\BookForm.cshtml" />
+    <Content Include="Views\Book\ReadOnlyBookList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -533,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907131550430_BooksModelAdded.resx">
       <DependentUpon>201907131550430_BooksModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907141717476_SeedUsers.resx">
+      <DependentUpon>201907141717476_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

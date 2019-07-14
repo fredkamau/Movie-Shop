@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "ReadOnlyBookList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Books</h2>
+
+<table id="books" class="table table-bordered table-striped table-condensed">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Book Name</td>
+            <td>Author Name</td>
+            <td>ISBN</td>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var books in Model)
+        {
+            <tr>
+                <td>@books.Id</td>
+                <td>@books.Name</td>
+                <td>@books.AuthorName</td>         
+                <td>@books.ISBN</td>            
+            </tr>
+        }
+
+
+    </tbody>
+
+</table>
+
+

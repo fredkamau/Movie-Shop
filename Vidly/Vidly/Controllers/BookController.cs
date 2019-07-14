@@ -22,13 +22,18 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
             var books = _bookContext.Books.ToList();
-            return View(books);
+            if (User.IsInRole("CanManageBooks"))
+            {
+                return View("BookList", books);
+            }
+            return View("ReadOnlyBookList", books);
         }
         public ActionResult Details(int id)
         {
             var books = _bookContext.Books.SingleOrDefault(b => b.Id == id);
             return View(books);
         }
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult BookForm()
         {
             return View();
