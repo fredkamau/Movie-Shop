@@ -14,6 +14,8 @@ namespace Vidly.App_Start
         {
             Mapper.CreateMap<Customer, CustomerDto>();
             Mapper.CreateMap<CustomerDto, Customer>();
+            Mapper.CreateMap<Book, BookDto>();
+            Mapper.CreateMap<BookDto, Book>();
         }
 
     }

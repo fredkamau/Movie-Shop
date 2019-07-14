@@ -5,6 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Vidly.Models;
+using AutoMapper;
+using Vidly.Dtos;
 
 namespace Vidly.Controllers.Api
 {
@@ -16,65 +18,64 @@ namespace Vidly.Controllers.Api
             _booksContext = new ApplicationDbContext();
         }
         //GET /api/books
-        public IEnumerable<Book> GetBooks()
+        public IHttpActionResult GetBooks()
         {
-            var books = _booksContext.Books.ToList();
-            return books;
+            return Ok(_booksContext.Books.ToList().Select(Mapper.Map<Book, BookDto>));           
         }
         //GET /api/books/1
-        public Book GetBook(int id)
+        public IHttpActionResult GetBook(int id)
         {
             var books = _booksContext.Books.SingleOrDefault(b => b.Id == id);
             if (books == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            return books;
+                return NotFound();
+            return Ok(Mapper.Map<Book, BookDto>(books));
+           
         }
         //POST /api/books
         [HttpPost]
-        public Book CreateBook(Book book)
+        public IHttpActionResult CreateBook(BookDto bookDto)
         {
 
             if (!ModelState.IsValid)
             {
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest();
             }
-            _booksContext.Books.Add(book);
+            var books = Mapper.Map<BookDto, Book>(bookDto);
+
+            _booksContext.Books.Add(books);
             _booksContext.SaveChanges();
-            return book;
+            bookDto.Id = books.Id;
+            return Created(new Uri(Request.RequestUri + "/" + books.Id), bookDto);
         }
         [HttpPut]
         //PUT /api/books
-        public Book Update(int id, Book book)
+        public IHttpActionResult Update(int id, BookDto bookDto)
         {
             if (!ModelState.IsValid)
             {
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest();
             }
             var bookInDb = _booksContext.Books.SingleOrDefault(c => c.Id == id);
             if (bookInDb == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
             }
-            bookInDb.ISBN = book.ISBN;
-            bookInDb.Name = book.Name;
-            bookInDb.NumberInStock = book.NumberInStock;
-            bookInDb.DatePublished = book.DatePublished;
-            bookInDb.AuthorName = book.AuthorName;
+            Mapper.Map(bookDto, bookInDb);
             _booksContext.SaveChanges();
-            return book;
+            return Ok();
         }
         //DELETE /api/books/1
         [HttpDelete]
-        public void DeleteBook(int id)
+        public IHttpActionResult DeleteBook(int id)
         {
             var bookinDb = _booksContext.Books.SingleOrDefault(b => b.Id == id);
             if (bookinDb == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
             }
             _booksContext.Books.Remove(bookinDb);
             _booksContext.SaveChanges();
-
+            return Ok();
         }
     }
 }
