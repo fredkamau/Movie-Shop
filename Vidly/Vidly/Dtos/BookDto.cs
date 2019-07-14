@@ -6,17 +6,16 @@ using System.Web;
 
 namespace Vidly.Dtos
 {
-    public class CustomerDto
+    public class BookDto
     {
+
         public int Id { get; set; }
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
-        public bool IsSubscribedToNewsletter { get; set; }
-        public byte MembershipTypeId { get; set; }
-        public DateTime? Birthdate { get; set; }
-        public int PhoneNumber { get; set; }
-        public int NationalId { get; set; }
-
+        public DateTime? DatePublished { get; set; }
+        public string AuthorName { get; set; }
+        public int NumberInStock { get; set; }
+        public int ISBN { get; set; }
     }
 }
